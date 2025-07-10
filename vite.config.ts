@@ -2,22 +2,19 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
-
 export default defineConfig({
+  base: '/grafomotoria3/'   , // usa el nombre de tu repo
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'GrafomotorIA',
         short_name: 'GrafomotorIA',
-        description: 'App educativa GrafomotorIA con soporte offline',
-        theme_color: '#ffffff',
-        background_color: '#ffffff',
-        display: 'standalone',
-        scope: '/',
         start_url: '/',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
         icons: [
           {
             src: '/icon-192x192.png',
@@ -32,6 +29,5 @@ export default defineConfig({
         ]
       }
     })
-  ],
-  base: './', // para GitHub Pages
+  ]
 });
