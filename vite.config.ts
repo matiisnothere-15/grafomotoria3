@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/grafomotoria3/', // 👈 Necesario para que GitHub Pages funcione
+  base: '/grafomotoria3/', // 👈 ¡IMPORTANTE para funcionar en rutas distintas a raíz!
   plugins: [
     react(),
     VitePWA({
@@ -12,7 +12,7 @@ export default defineConfig({
       manifest: {
         name: 'GrafomotorIA',
         short_name: 'Grafomotor',
-        start_url: '/grafomotoria3/', // 👈 También lo puedes ajustar si quieres navegación desde la raíz
+        start_url: '/grafomotoria3/', // 👈 También debe reflejar la ruta base
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#e30613',

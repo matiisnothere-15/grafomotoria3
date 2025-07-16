@@ -7,7 +7,6 @@ import './index.css'
 // ✅ PWA: Registrar service worker antes o después del render
 import { registerSW } from 'virtual:pwa-register'
 
-// 🔁 Registrar SW con opciones útiles
 registerSW({
   onNeedRefresh() {
     if (confirm("🔄 Hay una nueva versión disponible. ¿Deseas actualizar ahora?")) {
@@ -16,7 +15,6 @@ registerSW({
   },
   onOfflineReady() {
     console.log("✅ La aplicación está lista para funcionar sin conexión.")
-    // Aquí podrías mostrar un toast u otro aviso visual si quieres
   },
   onRegisteredSW(swUrl, r) {
     console.log("📦 Service Worker registrado:", swUrl)
@@ -26,10 +24,10 @@ registerSW({
   }
 })
 
-// 🔧 Render de la app
+// ✅ Render de la app con basename correcto
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/grafomotoria3">
       <App />
     </BrowserRouter>
   </React.StrictMode>
