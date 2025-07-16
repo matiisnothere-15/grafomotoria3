@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --host --port $PORT",
+    "build": "vite build --base=/grafomotoria3/",
+    "preview": "vite preview --host --port 4173",
     "start": "serve -s dist",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
