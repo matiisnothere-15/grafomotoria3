@@ -24,7 +24,8 @@ export default defineConfig({
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#e30613',
-        orientation: 'portrait',
+        orientation: 'landscape',
+
         launch_handler: {
           client_mode: 'focus-existing'
         },
